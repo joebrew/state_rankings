@@ -1,4 +1,4 @@
-install.packages('rgdal')
+#install.packages('rgdal')
 library(rgdal)
 root <- getwd()
 setwd('data')
@@ -7,10 +7,10 @@ states <- readOGR('.', 'cb_2014_us_state_20m')
 states <- states[!states$NAME %in% c('District of Columbia', 'Puerto Rico'),]
 
 # Tier
-states$tier <- c(1,1,3,4,1,4,3,3,4,3,
+states$tier <- c(1,1,3,3,1,4,3,3,4,3,
                  3,3,1,1,2,2,2,2,2,2,
                  4,2,4,3,1,4,2,1,4,1,
-                 1,3,2,4,3,3,2,1,4,2,
+                 1,3,2,4,4,3,2,1,4,2,
                  4,3,3,4,2,1,4,3,1,4)
 
 # Color
